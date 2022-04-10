@@ -76,12 +76,13 @@ def main_2():
     npt.plot(np.arange(a, b + h, h), liy, color='red')  # приближенное
     npt.plot(np.arange(a, b + h, h), fun2_2(np.arange(a, b + h, h)), '--', color='orange')  # точное
 
-    npt.legend(('Приближенное для funx', 'Точное для fun1', 'Приближенное для funy', 'Точное для fun2'))
+    npt.legend(('Приближенное для x=(-2)*x+4*y', 'Точное для x=4*(e^(-t))-e^2*t',
+                'Приближенное для y=-x+3*y', 'Точное для y=(e^(-t))-e^(2*t)'))
 
     npt.show()
 
 
-def main():
+def main_1():
     a = 0
     b = 10
     h = 0.01
@@ -120,7 +121,8 @@ def main():
     npt.plot(np.arange(a, b + h, h), liy, color='red')  # приближенное
     npt.plot(np.arange(a, b + h, h), fun2_1(np.arange(a, b + h, h)), '--', color='orange')  # точное
 
-    npt.legend(('Приближенное для funx', 'Точное для fun1', 'Приближенное для funy', 'Точное для fun2'))
+    npt.legend(('Приближенное для x = y', 'Точное для x=(e^(2*t))+1',
+                'Приближенное для y=2*y', 'Точное для y=2*(e^(2*t))'))
 
     npt.show()
 
@@ -128,4 +130,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main_1()
